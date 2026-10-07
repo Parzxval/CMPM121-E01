@@ -28,13 +28,11 @@
     const swatch = document.querySelector("#swatch");
 
     function update() {
-        let item = presetArr[0];
-        for (let i = 0; i < presetArr.length; i++) {
-          if (i === currPresetIndex) item = presetArr[i];
+        let item = presetArr[currPresetIndex];
         label.textContent = item.name;
         swatch.style.backgroundColor = item.color;
-      }
     }
+    
     
 
     document.querySelector("#next").addEventListener("click", () => {
